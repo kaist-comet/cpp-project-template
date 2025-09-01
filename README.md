@@ -8,8 +8,11 @@ A simple C++ project template using CMake for easy building and project manageme
 cpp-project-template/
 ├── CMakeLists.txt      # Build configuration
 ├── README.md           # This file
-└── src/
-    └── main.cpp        # Main source file
+├── include/            # Header files
+│   └── math_utils.h    # Math utility functions header
+└── src/                # Source files
+    ├── main.cpp        # Main source file
+    └── math_utils.cpp  # Math utility functions implementation
 ```
 
 ## Prerequisites
@@ -57,14 +60,16 @@ mkdir build && cd build && cmake .. && cmake --build . && ./MyProject
 ## Adding New Source Files
 
 1. Add your `.cpp` files to the `src/` directory
-2. Update `CMakeLists.txt` to include the new files:
+2. Add your `.h` or `.hpp` header files to the `include/` directory
+3. Update `CMakeLists.txt` to include the new files:
    ```cmake
    add_executable(${PROJECT_NAME} 
        src/main.cpp
+       src/math_utils.cpp
        src/your_new_file.cpp
    )
    ```
-3. Rebuild the project
+4. Rebuild the project
 
 ## Customization
 
