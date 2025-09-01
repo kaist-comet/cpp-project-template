@@ -20,4 +20,12 @@ namespace MathUtils {
         }
         return a / b;
     }
+
+    int sum(const std::vector<int>& vec) {
+        int result = 0;
+        for (int value : vec) {
+            result += value;
+        }
+        return result;
+    }
 }
