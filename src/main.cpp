@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "math_utils.h"
 
 int main() {
@@ -14,6 +15,9 @@ int main() {
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
     }
+    
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
+    std::cout << "Sum of vector {1, 2, 3, 4, 5}: " << MathUtils::sum(numbers) << std::endl;
     
     return 0;
 }
